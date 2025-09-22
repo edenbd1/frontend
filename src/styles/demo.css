@@ -1,0 +1,59 @@
+.demo-section {
+  background-color: #006AFE;
+  width: 100%;
+  min-height: 100vh;
+  cursor: pointer;
+}
+
+.demo-container {
+  margin: 0 auto;
+  padding: 6vh 4vw;
+  width: 100%;
+  max-width: 1600px;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.demo-player {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  /* shadow removed per request */
+}
+
+.demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* actions removed per request */
+
+.floating-play {
+  position: absolute;
+  transform: translate(0, 0);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* léger écart entre icône et texte */
+  padding: 22px 38px 22px 34px; /* léger élargissement horizontal */
+  background-color: #1e85ff; /* couleur unie plus claire */
+  color: #ffffff;
+  border-radius: 44px;
+  /* shadow removed per request */
+  pointer-events: none;
+  font-family: 'Noto Sans';
+  font-weight: 500;
+  font-size: 14px;
+  transition: transform 80ms ease-out, opacity 120ms ease-out;
+}
+
