@@ -5,12 +5,9 @@ import Header from './Header';
 import Footer from './Footer';
 import Demo from './Demo';
 import WhatXSay from './WhatXSay';
-
 import Hero from './Hero';
 import Features from './Features';
 import Faq from './Faq';
-import Badge from './Badge';
-import Newsletter from './Newsletter';
 
 import FaqPage from '../pages/FaqPage';
 import TermsPage from '../pages/TermsPage';
@@ -44,8 +41,6 @@ const HomePage: React.FC = () => {
       <WhatXSay />
       <Features />
       <Faq />
-      <Newsletter />
-      <Badge />
     </>
   );
 };
@@ -53,7 +48,7 @@ const HomePage: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#010314' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#ffffff' }}>
         <ScrollToHandler />
         <Header />
         <main>

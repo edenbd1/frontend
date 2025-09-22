@@ -25,6 +25,12 @@ const FEATURES_LIST: IFeature[] = [
     title: 'Powerful UX',
     description: 'Whether you are a DeFi expert or a newcomer, the experience is intuitive and clean.',
     videoSrc: 'https://www.w3schools.com/html/mov_bbb.mp4'
+  },
+  {
+    id: 'instant',
+    title: 'Instant Transactions',
+    description: 'Lightning-fast settlement on Stellar blockchain — tips arrive in seconds, not minutes.',
+    videoSrc: 'https://www.w3schools.com/html/mov_bbb.mp4'
   }
 ];
 

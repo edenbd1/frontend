@@ -22,7 +22,7 @@ const Demo: React.FC = () => {
   const startAnim = () => {
     if (animRef.current != null) return;
     const tick = () => {
-      const ease = 0.13; // slower trailing for visible follow
+      const ease = 0.1; // slower trailing for visible follow
       currentRef.current.x += (targetRef.current.x - currentRef.current.x) * ease;
       currentRef.current.y += (targetRef.current.y - currentRef.current.y) * ease;
       setCursorPos({ x: currentRef.current.x, y: currentRef.current.y });

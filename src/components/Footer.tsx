@@ -1,55 +1,90 @@
 import React from 'react';
-import { FaTwitter, FaGithub, FaDiscord } from 'react-icons/fa';
 
 import '../styles/footer.css';
-import logoText from '../assets/images/logo_text.svg';
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container">
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-left">
-            <img src={logoText} className="footer-logo" />
-            <div className="footer-description">
-              <p>zlend is a decentralized peer-to-peer lending and borrowing protocol built on Aleo. Unlike traditional protocols, it leverages zero-knowledge technology to enable private transactions, with a liquidation mechanism based on collateral value. Users can lend and borrow ETH, USDC, and Aleo while preserving both privacy and security.</p>
-            </div>
-            <div className="footer-social">
-              <a href="https://discord.gg/VJkXvVKWfp" className="social-link" target="_blank" rel="noopener noreferrer"><FaDiscord /></a>
-              <a href="https://twitter.com/zLendfi" className="social-link" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-              <a href="https://github.com/zLend-fi" className="social-link" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-            </div>
-          </div>
+    <footer className="footer">
+      <div className="wave-separator">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="wave-svg"
+        >
+          <path
+            d="
+              M0,60
+              Q120,0 240,60
+              Q360,120 480,60
+              Q600,0 720,60
+              Q840,120 960,60
+              Q1080,0 1200,60
+              L1200,120
+              L0,120
+              Z"
+            className="shape-fill wave-path"
+          />
+        </svg>
+      </div>
 
-          <div className="footer-right">
-            <div className="footer-right-section">
-              <p>Ressources</p>
-              <ul>
-                <li><a href="/#Home">Home</a></li>
-                <li><a href="/#Perks">Perks</a></li>
-                <li><a href="/#FAQ">FAQ</a></li>
-              </ul>
+      <div className="footer-content-wrapper">
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-section">
+              <div className="footer-logo">
+                <img
+                  src="/WaveTip Logo.webp"
+                  alt="WaveTip"
+                  className="logo-footer"
+                />
+              </div>
+              <p>
+                Making crypto tipping the default payment method for real-time
+                creator monetization. Built on the XRPL for instant, secure
+                payments.
+              </p>
             </div>
-            <div className="footer-right-section">
-              <p>Ecosystem</p>
-              <ul>
-                <li><a href="https://aleo.org/" target="_blank" rel="noopener noreferrer">Aleo</a></li>
-                <li><a href="https://provable.com/" target="_blank" rel="noopener noreferrer">Provable</a></li>
-                <li><a href="https://zsociety.io/" target="_blank" rel="noopener noreferrer">zSociety</a></li>  
-              </ul>
+            <div className="footer-section">
+              <h4>Navigate</h4>
+              <a href="#video">Demo</a>
+              <a href="#roadmap">Roadmap</a>
+              <a href="#highlights">Highlights</a>
             </div>
-            <div className="footer-right-section">
-              <p>Company</p>
-              <ul>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/terms">Terms</a></li>
-                <li><a href="mailto:contact@zlend.fi">Contact</a></li>
-              </ul>
+            <div className="footer-section">
+              <h4>Ecosystem</h4>
+              <a href="https://xrpl.org/" target="_blank" rel="noopener noreferrer">
+                XRP Ledger
+              </a>
+              <a href="https://ripple.com/solutions/stablecoin/" target="_blank" rel="noopener noreferrer">
+                RLUSD
+              </a>
+              <a href="https://web3auth.io" target="_blank" rel="noopener noreferrer">
+                Web3Auth
+              </a>
+            </div>
+            <div className="footer-section">
+              <h4>Contact</h4>
+              <a
+                href="https://www.linkedin.com/company/wavetip/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a href="https://x.com/wavetip_fi" target="_blank" rel="noopener noreferrer">
+                Twitter X
+              </a>
+              <a href="https://tally.so/r/wQaGEl" target="_blank" rel="noopener noreferrer">
+                Waitlist
+              </a>
             </div>
           </div>
+          <div className="footer-bottom" />
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 

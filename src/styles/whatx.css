@@ -5,7 +5,7 @@
 .whatx-container {
   margin: 0 auto;
   padding: clamp(50px, 6vw, 80px) clamp(20px, 6vw, 60px);
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .whatx-title {
@@ -20,33 +20,73 @@
   text-decoration: line-through;
 }
 
-.tweet-grid {
+.tweets-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
 .tweet-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
   padding: 16px;
   background: #f9fafb;
+  text-decoration: none;
+  color: inherit;
 }
 
 .tweet-header {
-  display: flex;
-  justify-content: space-between;
-  color: #666;
-  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
   font-family: 'Noto Sans';
 }
 
-.tweet-handle { font-weight: 600; }
-.tweet-date { font-size: 0.85rem; }
+.tweet-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tweet-author {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #111;
+}
+
+.author-handle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tweet-platform { color: #111; }
+
+.tweet-content { margin-bottom: 12px; }
 
 .tweet-text {
   font-family: 'Noto Sans';
   color: #111;
+}
+
+.tweet-footer { font-family: 'Noto Sans'; }
+
+.tweet-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .whatx-container { padding: 40px 20px; }
 }
 
 
