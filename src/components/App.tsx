@@ -2,17 +2,21 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import Header from './Header';
-import Footer from './Footer';
 import Demo from './Demo';
 import WhatXSay from './WhatXSay';
 import Hero from './Hero';
 import Features from './Features';
 import Faq from './Faq';
+import Waitlist from './Waitlist';
+import Footer from './Footer';
 
 import FaqPage from '../pages/FaqPage';
 import TermsPage from '../pages/TermsPage';
 import PrivacyPage from '../pages/PrivacyPage';
 import NotFoundPage from '../pages/NotFoundPage';
+
+import '../styles/footer.css';
+import '../styles/waitlist.css';
 
 const ScrollToHandler: React.FC = () => {
   const { pathname, hash } = useLocation();
@@ -41,6 +45,8 @@ const HomePage: React.FC = () => {
       <WhatXSay />
       <Features />
       <Faq />
+      <Waitlist />
+      <Footer />
     </>
   );
 };
@@ -48,7 +54,7 @@ const HomePage: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#ffffff' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#010314' }}>
         <ScrollToHandler />
         <Header />
         <main>
@@ -60,7 +66,6 @@ const App: React.FC = () => {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   );

@@ -1,3 +1,10 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Design tokens */
 :root {
     --color-primary: #006afe;
@@ -15,6 +22,19 @@
     --color-primary-30a: rgba(37, 99, 235, 0.3);
     --border-primary-10: rgba(37, 99, 235, 0.1);
     --border-primary-20: rgba(37, 99, 235, 0.2);
+}
+
+body {
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* =========================
@@ -191,47 +211,4 @@
     padding-top: 20px;
     text-align: center;
     color: var(--color-slate-400);
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding-left: 0;
-        text-align: center;
-    }
-    
-    .footer-section:first-child {
-        padding-right: 0;
-    }
-    
-    .footer-section:not(:first-child) {
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-content-wrapper {
-        padding: 40px 0 20px;
-    }
-    
-    .footer-content {
-        gap: 30px;
-    }
-    
-    .footer-section h4 {
-        font-size: 1rem;
-        margin-bottom: 15px;
-    }
-    
-    .logo-footer {
-        height: 36px;
-    }
 }

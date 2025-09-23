@@ -1,8 +1,6 @@
-import React from 'react';
+import type React from "react";
 
-import '../styles/footer.css';
-
-const Footer: React.FC = () => {
+export default function Footer(): React.ReactElement {
   return (
     <footer className="footer">
       <div className="wave-separator">
@@ -48,7 +46,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="footer-section">
               <h4>Navigate</h4>
-              <a href="#video">Demo</a>
+              <a href="#Demo">Demo</a>
               <a href="#roadmap">Roadmap</a>
               <a href="#highlights">Highlights</a>
             </div>
@@ -86,6 +84,4 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
