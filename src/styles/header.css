@@ -58,22 +58,21 @@
   border: 2px solid transparent;
   padding: 0.7rem 1.25rem;
   cursor: pointer;
+  transition: transform 0.15s ease;
   position: relative;
   overflow: hidden;
-  transition: opacity 0.2s ease;
 }
 
 .button-container button:hover {
-  border-radius: 100px;
-  border: 2px solid transparent;
-  opacity: 1;
+  border-radius: 100px; /* ne plus changer */
+  border-color: transparent; /* ne plus dessiner de bordure foncée */
+  transform: translateY(-1px); /* hover discret */
 }
 
 .button-container button span {
   z-index: 2;
   font-size: 1rem;
-  color: white;
-  mix-blend-mode: difference;
+  color: black; /* couleur fixe, pas d’inversion */
   position: relative;
 }
 
