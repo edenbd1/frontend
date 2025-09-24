@@ -5,7 +5,7 @@
 .whatx-container {
   margin: 0 auto;
   padding: clamp(50px, 6vw, 80px) clamp(20px, 6vw, 60px);
-  max-width: 1100px;
+  max-width: 1320px; /* fits 3 cards (3x390 + 2xgap) + side paddings */
 }
 
 .whatx-title {
@@ -14,6 +14,7 @@
   font-weight: 600;
   color: black;
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .strike {
@@ -26,29 +27,62 @@
   gap: 16px;
 }
 
+/* basic UI styles for the lightweight carousel */
+.ui-carousel {
+  position: relative;
+  padding: 0 0 56px 0; /* reserve space at bottom for centered nav buttons */
+  --carousel-item-width: 390px;
+  --carousel-gap: 12px;
+}
+.ui-carousel-content {
+  display: flex;
+  gap: var(--carousel-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* hide native horizontal scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  width: min(100%, calc(3 * var(--carousel-item-width) + 2 * var(--carousel-gap)));
+  margin: 0 auto;
+}
+.ui-carousel-content::-webkit-scrollbar { display: none; }
+.ui-carousel-item {
+  scroll-snap-align: center;
+  flex: 0 0 var(--carousel-item-width); /* fixed width per card */
+  width: var(--carousel-item-width);
+  max-width: 100%;
+}
+.ui-carousel-prev, .ui-carousel-next {
+  position: absolute;
+  bottom: 10px;
+  background: #006AFE;
+  color: white;
+  border: none;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+/* center the two buttons side-by-side at the bottom */
+.ui-carousel-prev { left: calc(50% - 24px - 14px); }
+.ui-carousel-next { left: calc(50% + 24px + 14px); }
+
 .tweet-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 12px;
-  padding: 16px;
-  background: #f9fafb;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 16px;
+  padding: 20px;
+  background: #ffffff;
   text-decoration: none;
   color: inherit;
-}
-
-.tweet-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
-  font-family: 'Noto Sans';
+  height: 480px; /* requested fixed height */
 }
 
 .tweet-avatar img {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -76,13 +110,54 @@
 .tweet-text {
   font-family: 'Noto Sans';
   color: #111;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 9; /* allow more lines for taller card */
+  -webkit-box-orient: vertical;
+  line-clamp: 9;
+  overflow: hidden;
 }
 
-.tweet-footer { font-family: 'Noto Sans'; }
+.tweet-footer {
+  font-family: 'Noto Sans';
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
 
 .tweet-date {
   font-size: 0.85rem;
   color: #666;
+}
+
+/* Make inner CardContent fill the card for consistent sizing */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 1320px) {
+  .whatx-section .ui-carousel-content {
+    width: min(100%, calc(2 * var(--carousel-item-width) + var(--carousel-gap)));
+  }
+}
+
+@media (max-width: 900px) {
+  .whatx-section .ui-carousel-content {
+    width: min(100%, var(--carousel-item-width));
+  }
+}
+
+@media (max-width: 640px) {
+  .whatx-section .ui-carousel {
+    --carousel-item-width: 320px;
+  }
+  .whatx-section .ui-carousel-content {
+    --carousel-gap: 10px;
+  }
 }
 
 @media (max-width: 600px) {

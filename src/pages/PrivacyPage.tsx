@@ -68,18 +68,19 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ sections }) => {
   );
 };
 
-const SITE_NAME = "zlend";
+const SITE_NAME = 'WaveTip';
 
 const sections = [
   { id: 'introduction', title: '1. Introduction' },
-  { id: 'collection', title: '2. Information Collection' },
-  { id: 'usage', title: '3. How We Use Your Information' },
-  { id: 'privacy', title: '4. Zero-Knowledge Privacy' },
-  { id: 'sharing', title: '5. Information Sharing' },
+  { id: 'collection', title: '2. Information We Collect' },
+  { id: 'usage', title: '3. How We Use Information' },
+  { id: 'extension-data', title: '4. Browser Extension Data' },
+  { id: 'sharing', title: '5. Sharing & Disclosure' },
   { id: 'security', title: '6. Data Security' },
-  { id: 'controls', title: '7. User Controls and Rights' },
-  { id: 'changes', title: '8. Changes to This Policy' },
-  { id: 'contact', title: '9. Contact Information' }
+  { id: 'choices', title: '7. Your Choices & Rights' },
+  { id: 'cookies', title: '8. Cookies & Tracking' },
+  { id: 'changes', title: '9. Updates to This Policy' },
+  { id: 'contact', title: '10. Contact' }
 ];
 
 const PrivacyPage: React.FC = () => {
@@ -94,28 +95,26 @@ const PrivacyPage: React.FC = () => {
           <section id="introduction">
             <h2><span className="section-number">1.</span> Introduction</h2>
             <p>
-              Your privacy is important to us. It is {SITE_NAME}'s policy to respect your privacy regarding any 
-              information we may collect from you across our website and decentralized application.
+              Your privacy is important to us. This Privacy Policy explains how {SITE_NAME} (the browser extension,
+              waitlist form, and related websites) collects, uses, and protects information when you interact with us.
             </p>
             <p>
-              This Privacy Policy outlines how we collect, use, store, and disclose information when you use our
-              services. By accessing or using {SITE_NAME}, you agree to the collection and use of information in 
-              accordance with this policy.
+              By installing the {SITE_NAME} extension, visiting our site, or joining the waitlist, you agree to the
+              practices described below. If you do not agree, please discontinue use of our services.
             </p>
           </section>
           
           <section id="collection">
             <h2><span className="section-number">2.</span> Information Collection</h2>
             <p>
-              As a privacy-focused decentralized platform built on the Aleo blockchain, {SITE_NAME} is designed 
-              to minimize data collection. We may collect the following types of information:
+              {SITE_NAME} is designed to minimize data collection. We gather the following categories of information:
             </p>
             <ul>
-              <li><strong>Blockchain Data:</strong> Public blockchain data that is visible on the Aleo network</li>
-              <li><strong>Usage Information:</strong> Anonymous data about how users interact with our platform</li>
-              <li><strong>Connection Information:</strong> Basic technical details such as browser type, device information, and IP address</li>
-              <li><strong>Cookies and Local Storage:</strong> Small files stored on your device to improve user experience</li>
-              <li><strong>Voluntary Information:</strong> Information you choose to provide through support channels or community forums</li>
+              <li><strong>Account & Waitlist Data:</strong> Email address, social handles, and preferences submitted through forms such as our waitlist on Tally.</li>
+              <li><strong>Usage Information:</strong> Aggregated analytics about button clicks, page views, and extension events, collected to understand feature adoption.</li>
+              <li><strong>Device & Technical Data:</strong> Browser type, operating system, referral URLs, and language settings used to optimize compatibility.</li>
+              <li><strong>Wallet Metadata:</strong> Public wallet addresses and transaction hashes required to complete RLUSD tipping transactions.</li>
+              <li><strong>Support Correspondence:</strong> Messages and attachments you send to our support channels.</li>
             </ul>
             <p>
               We prioritize privacy and collect only what is necessary to provide and improve our services.
@@ -126,98 +125,99 @@ const PrivacyPage: React.FC = () => {
             <h2><span className="section-number">3.</span> How We Use Your Information</h2>
             <p>We use the information we collect for the following purposes:</p>
             <ul>
-              <li>Providing and maintaining our platform</li>
-              <li>Improving, personalizing, and expanding our services</li>
-              <li>Understanding how users interact with our platform</li>
-              <li>Developing new products, features, and functionality</li>
-              <li>Communicating with you about service-related announcements</li>
-              <li>Detecting, preventing, and addressing technical or security issues</li>
+              <li>Operating the {SITE_NAME} extension and processing RLUSD tipping transactions.</li>
+              <li>Providing customer support and responding to your inquiries.</li>
+              <li>Sending product updates, beta invitations, and marketing communications (you can opt out at any time).</li>
+              <li>Improving functionality, safety, and performance of the extension and website.</li>
+              <li>Detecting, preventing, and investigating fraud, abuse, or security incidents.</li>
             </ul>
           </section>
           
-          <section id="privacy">
-            <h2><span className="section-number">4.</span> Zero-Knowledge Privacy</h2>
+          <section id="extension-data">
+            <h2><span className="section-number">4.</span> Browser Extension Data</h2>
             <p>
-              The {SITE_NAME} protocol leverages Aleo's zero-knowledge cryptography to enhance user privacy. 
-              This technology allows for verification of transactions without revealing underlying details about 
-              the participants or transaction amounts.
+              The {SITE_NAME} extension stores minimal information locally on your device, including your preferred
+              settings and recent tipping history for convenience. Wallet credentials are never collected or stored by us.
             </p>
             <p>
-              While the protocol provides significant privacy advantages, users should understand that some 
-              metadata may still be visible on the blockchain. We recommend reviewing Aleo's privacy documentation 
-              to fully understand these privacy properties.
+              Transactions are executed on the XRP Ledger (XRPL). Transaction details such as wallet addresses and
+              RLUSD amounts are recorded on-chain and governed by the XRPL’s public ledger rules.
             </p>
           </section>
           
           <section id="sharing">
-            <h2><span className="section-number">5.</span> Information Sharing</h2>
+            <h2><span className="section-number">5.</span> Sharing & Disclosure</h2>
             <p>
               We do not sell, trade, or otherwise transfer your information to third parties for marketing or 
               advertising purposes. Information may be shared in the following circumstances:
             </p>
             <ul>
-              <li>With service providers who assist us in operating our platform</li>
-              <li>When required to comply with applicable laws and regulations</li>
-              <li>To protect our rights, privacy, safety, or property</li>
-              <li>In connection with a business transfer, merger, or acquisition</li>
+              <li>With infrastructure providers (for example, analytics, hosting, payment partners) who support our operations under confidentiality obligations.</li>
+              <li>When required to comply with applicable laws, regulations, or legal processes.</li>
+              <li>To protect the rights, property, or safety of {SITE_NAME}, our users, or the public.</li>
+              <li>In connection with a merger, acquisition, or sale of assets, provided appropriate safeguards are in place.</li>
             </ul>
           </section>
           
           <section id="security">
             <h2><span className="section-number">6.</span> Data Security</h2>
             <p>
-              We implement reasonable security measures designed to protect your information. However, no method 
-              of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee 
-              absolute security.
+              We implement technical and organizational safeguards to protect your information, including encryption
+              of data in transit, strict access controls, and routine security reviews.
             </p>
             <p>
-              As a non-custodial platform, we do not store your private keys or have access to your wallets. 
-              You are responsible for maintaining the security of your wallet and credentials.
+              As a non-custodial service, we never store your private keys or seed phrases. We recommend maintaining
+              up-to-date security practices on your devices and wallets.
             </p>
           </section>
           
-          <section id="controls">
-            <h2><span className="section-number">7.</span> User Controls and Rights</h2>
-            <p>
-              You can control your privacy when using {SITE_NAME} through:
-            </p>
+          <section id="choices">
+            <h2><span className="section-number">7.</span> Your Choices & Rights</h2>
+            <p>You can manage your information in several ways:</p>
             <ul>
-              <li>Managing your wallet connections</li>
-              <li>Using privacy features built into the Aleo blockchain</li>
-              <li>Adjusting your browser settings for cookies and local storage</li>
-              <li>Choosing what personal information to share when contacting support</li>
+              <li>Update or remove your email address from the waitlist by following unsubscribe links in our emails.</li>
+              <li>Disconnect your wallet from the {SITE_NAME} extension at any time.</li>
+              <li>Configure your browser to limit cookies or local storage.</li>
+              <li>Contact us to request access, correction, or deletion of personal data we hold about you.</li>
             </ul>
             <p>
-              Depending on your jurisdiction, you may have certain rights regarding your personal information, 
-              including the right to access, correct, delete, or restrict processing of your data.
+              Depending on your jurisdiction, additional data protection rights may apply. We will honor valid requests
+              in accordance with applicable law.
             </p>
           </section>
           
-          <section id="changes">
-            <h2><span className="section-number">8.</span> Changes to This Policy</h2>
+          <section id="cookies">
+            <h2><span className="section-number">8.</span> Cookies & Tracking</h2>
             <p>
-              We may update our Privacy Policy from time to time. We will notify you of any changes by posting 
-              the new Privacy Policy on this page and updating the "last updated" date.
+              {SITE_NAME} uses cookies, local storage, and similar technologies to remember preferences, authenticate
+              sessions, and gather usage analytics. You can control cookies through your browser settings, though
+              disabling them may affect functionality.
+            </p>
+          </section>
+
+          <section id="changes">
+            <h2><span className="section-number">9.</span> Updates to This Policy</h2>
+            <p>
+              We may update this Privacy Policy periodically. Material changes will be announced through the extension,
+              website, or email. The “last updated” date reflects the most recent revision.
             </p>
             <p>
-              We encourage you to review this Privacy Policy periodically for any changes. Changes to this 
-              Privacy Policy are effective when they are posted on this page.
+              Continued use of {SITE_NAME} after updates become effective constitutes acceptance of the revised Policy.
             </p>
           </section>
           
           <section id="contact">
-            <h2><span className="section-number">9.</span> Contact Information</h2>
+            <h2><span className="section-number">10.</span> Contact</h2>
             <p>
-              If you have any questions or concerns about our Privacy Policy or data practices, please contact 
-              us through our community channels.
+              Questions about this Privacy Policy can be sent via the Support tab in the {SITE_NAME} extension or by
+              emailing <a href="mailto:contact@wavetip.fi">contact@wavetip.fi</a>.
             </p>
           </section>
           
           <div className="content-disclaimer">
-            {SITE_NAME} provides information and resources about the fundamentals of the decentralized non-custodial 
-            lending protocol called the {SITE_NAME} Protocol, comprised of open-source self-executing smart contracts 
-            that are deployed on Aleo blockchain. {SITE_NAME} Labs does not control or operate any version of the {SITE_NAME} 
-            Protocol on any blockchain network.
+            {SITE_NAME} is a non-custodial tipping experience built for Twitch creators and fans. Wallets remain under
+            your control, and all RLUSD transfers occur on the XRP Ledger. Always verify recipient details before
+            completing a transaction.
           </div>
         </div>
       </div>

@@ -68,17 +68,19 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ sections }) => {
   );
 };
 
-const SITE_NAME = "zlend";
+const SITE_NAME = 'WaveTip';
 
 const sections = [
   { id: 'introduction', title: '1. Introduction' },
-  { id: 'services', title: '2. Services Description' },
-  { id: 'protocol', title: '3. Protocol Non-Custodial Nature' },
-  { id: 'responsibilities', title: '4. User Responsibilities' },
-  { id: 'risks', title: '5. Financial Risks' },
-  { id: 'liability', title: '6. Limitation of Liability' },
-  { id: 'modifications', title: '7. Modifications to Terms' },
-  { id: 'governing-law', title: '8. Governing Law' }
+  { id: 'eligibility', title: '2. Eligibility & Accounts' },
+  { id: 'services', title: '3. Services Description' },
+  { id: 'wallets', title: '4. Wallets & Transactions' },
+  { id: 'fees', title: '5. Fees & Payments' },
+  { id: 'conduct', title: '6. Acceptable Use' },
+  { id: 'risks', title: '7. Risks & Disclaimers' },
+  { id: 'liability', title: '8. Limitation of Liability' },
+  { id: 'modifications', title: '9. Changes to Terms' },
+  { id: 'governing-law', title: '10. Governing Law & Contact' }
 ];
 
 const TermsPage: React.FC = () => {
@@ -93,127 +95,133 @@ const TermsPage: React.FC = () => {
           <section id="introduction">
             <h2><span className="section-number">1.</span> Introduction</h2>
             <p>
-              Welcome to {SITE_NAME}. These Terms of Service govern your access to and use of the {SITE_NAME} 
-              platform, including any content, functionality, and services offered through our website and 
-              decentralized application.
+              Welcome to {SITE_NAME}! These Terms of Service ("Terms") govern your access to and use of the
+              {SITE_NAME} website, browser extension, and related services (collectively, the "Services").
             </p>
             <p>
-              By accessing or using the {SITE_NAME} platform, you agree to be bound by these Terms of 
-              Service. If you do not agree to these terms, please do not access or use our platform.
+              By installing the extension, creating an account, or using the Services, you agree to these Terms.
+              If you do not agree, please discontinue use immediately.
             </p>
           </section>
           
+          <section id="eligibility">
+            <h2><span className="section-number">2.</span> Eligibility & Accounts</h2>
+            <p>
+              You must be of legal age in your jurisdiction to use {SITE_NAME}. By using the Services you confirm
+              that you are not barred from accessing cryptocurrency products under applicable law and that all
+              information you provide is accurate and complete.
+            </p>
+            <p>
+              Certain features (such as joining the waitlist) may require providing an email or social handle. You
+              are responsible for keeping this information current and secure.
+            </p>
+          </section>
+
           <section id="services">
-            <h2><span className="section-number">2.</span> Services Description</h2>
+            <h2><span className="section-number">3.</span> Services Description</h2>
             <p>
-              {SITE_NAME} is a decentralized lending and borrowing platform built on the Aleo blockchain that 
-              facilitates privacy-preserving financial transactions. The platform allows users to:
+              {SITE_NAME} is a non-custodial tipping experience built on the XRP Ledger (XRPL) that allows:
             </p>
             <ul>
-              <li>Lend digital assets to earn interest</li>
-              <li>Borrow digital assets by providing appropriate collateral</li>
-              <li>Interact with smart contracts deployed on the Aleo blockchain</li>
-              <li>Access information about lending and borrowing markets</li>
+              <li>Viewers to tip Twitch streamers in RLUSD with low fees.</li>
+              <li>Streamers to connect wallets, receive RLUSD, and track tipping activity.</li>
+              <li>Community managers to manage campaigns and analytics within the extension.</li>
             </ul>
-          </section>
-          
-          <section id="protocol">
-            <h2><span className="section-number">3.</span> Protocol Non-Custodial Nature</h2>
             <p>
-              The {SITE_NAME} Protocol consists of open-source or source-available software deployed on the 
-              Aleo blockchain. This software facilitates the lending and borrowing of digital assets through 
-              self-executing smart contracts.
-            </p>
-            <p>
-              <strong>Important:</strong> {SITE_NAME} Labs does not control or operate any version of the protocol 
-              on any blockchain network. The protocol is non-custodial, meaning we never take possession of your 
-              digital assets. Users maintain full control and responsibility over their digital assets at all times.
+              We may add or remove features as we iterate on the product roadmap.
             </p>
           </section>
           
-          <section id="responsibilities">
-            <h2><span className="section-number">4.</span> User Responsibilities</h2>
+          <section id="wallets">
+            <h2><span className="section-number">4.</span> Wallets & Transactions</h2>
             <p>
-              As a user of {SITE_NAME}, you acknowledge and agree that:
+              {SITE_NAME} integrates with third-party wallets to execute RLUSD transactions on XRPL. We never take
+              custody of your funds, private keys, or seed phrases.
             </p>
-            <ul>
-              <li>You are solely responsible for maintaining the security of your wallet and private keys</li>
-              <li>All activities performed through your wallet are your responsibility</li>
-              <li>You will comply with all applicable laws and regulations</li>
-              <li>You have sufficient knowledge and experience to make your own evaluation of the merits and risks of using the protocol</li>
-              <li>You will not engage in any activities that could damage, disable, or impair the function of the platform</li>
-            </ul>
+            <p>
+              You are solely responsible for safeguarding your wallet credentials and for verifying recipient
+              details before confirming a transaction. Transactions on XRPL are irreversible once broadcast.
+            </p>
           </section>
           
+          <section id="fees">
+            <h2><span className="section-number">5.</span> Fees & Payments</h2>
+            <p>
+              Tipping transactions executed through {SITE_NAME} incur a 1% service fee on the amount tipped, in
+              addition to any network fees required by XRPL. Fees are disclosed at checkout and may change with prior
+              notice.
+            </p>
+            <p>
+              We may partner with third-party providers to offer on-ramp services. Any purchases made through those
+              partners are subject to their own terms and fees.
+            </p>
+          </section>
+          
+          <section id="conduct">
+            <h2><span className="section-number">6.</span> Acceptable Use</h2>
+            <p>
+              You agree not to use {SITE_NAME} to engage in illegal activities, money laundering, fraudulent tipping
+              campaigns, or harassment of creators. We reserve the right to suspend or terminate access for violations
+              of these Terms or applicable law.
+            </p>
+            <p>
+              You are responsible for ensuring that use of our Services complies with Twitch’s terms and community
+              guidelines.
+            </p>
+          </section>
+
           <section id="risks">
-            <h2><span className="section-number">5.</span> Financial Risks</h2>
+            <h2><span className="section-number">7.</span> Risks & Disclaimers</h2>
             <p>
-              Using {SITE_NAME} involves significant financial risks, including but not limited to:
+              Using blockchain technology and digital assets involves risks, including price volatility, regulatory
+              changes, smart contract vulnerabilities, and network outages. {SITE_NAME} does not guarantee the
+              availability or value of RLUSD or any other asset.
             </p>
-            <ul>
-              <li>Price volatility of digital assets</li>
-              <li>Smart contract vulnerabilities and technical risks</li>
-              <li>Potential for liquidation of collateral</li>
-              <li>Variable interest rates and market fluctuations</li>
-              <li>Regulatory uncertainty related to digital assets</li>
-              <li>Network congestion, delays, or failure</li>
-            </ul>
             <p>
-              You acknowledge that you use the platform at your own risk and that you have conducted your own 
-              investigation and assessment of the risks of using {SITE_NAME}.
+              You acknowledge that you are responsible for understanding these risks and for complying with any
+              applicable tax or reporting obligations.
             </p>
           </section>
           
           <section id="liability">
-            <h2><span className="section-number">6.</span> Limitation of Liability</h2>
+            <h2><span className="section-number">8.</span> Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by law, {SITE_NAME} and its affiliates shall not be liable for 
-              any indirect, incidental, special, consequential, or punitive damages, including loss of profits, 
-              data, or goodwill, arising out of or in connection with your access to or use of the platform.
+              To the fullest extent permitted by law, {SITE_NAME}, its founders, and partners are not liable for
+              indirect, incidental, consequential, or punitive damages, including lost profits, arising from your use
+              of the Services.
             </p>
             <p>
-              This includes, but is not limited to, damages resulting from:
+              We provide the Services on an "as is" and "as available" basis without warranties of any kind, express or
+              implied.
             </p>
-            <ul>
-              <li>Smart contract vulnerabilities or failures</li>
-              <li>Loss of digital assets</li>
-              <li>Unauthorized access to your wallet</li>
-              <li>Market volatility or unexpected economic conditions</li>
-              <li>Regulatory actions or changes in law</li>
-              <li>Technical failures or disruptions in service</li>
-            </ul>
           </section>
           
           <section id="modifications">
-            <h2><span className="section-number">7.</span> Modifications to Terms</h2>
+            <h2><span className="section-number">9.</span> Changes to Terms</h2>
             <p>
-              We reserve the right to modify these Terms of Service at any time at our sole discretion. Any 
-              changes will be effective immediately upon posting the updated terms on our website.
+              We may update these Terms from time to time. Material changes will be communicated via the extension,
+              website, or email. The “last updated” date indicates when revisions take effect.
             </p>
             <p>
-              Your continued use of {SITE_NAME} after the posting of revised Terms of Service constitutes your 
-              acceptance of the changes. We encourage you to periodically review this page to stay informed 
-              about any updates.
+              Continued use of {SITE_NAME} after revised Terms are posted constitutes acceptance. If you do not agree
+              to the changes, you must stop using the Services.
             </p>
           </section>
           
           <section id="governing-law">
-            <h2><span className="section-number">8.</span> Governing Law</h2>
+            <h2><span className="section-number">10.</span> Governing Law & Contact</h2>
             <p>
-              These Terms of Service shall be governed by and construed in accordance with applicable laws, 
-              without regard to its conflict of law provisions.
+              These Terms are governed by the laws applicable in your jurisdiction of residence, without regard to
+              conflicts of law principles.
             </p>
             <p>
-              Any disputes arising under or in connection with these Terms shall be resolved through arbitration 
-              in accordance with the rules of the relevant jurisdiction.
+              Questions regarding these Terms can be directed to <a href="mailto:contact@wavetip.fi">contact@wavetip.fi</a>.
             </p>
           </section>
           
           <div className="content-disclaimer">
-            The information provided on {SITE_NAME} does not constitute investment advice, financial advice, 
-            trading advice, or any other sort of advice, and you should not treat any of the platform's content 
-            as such. {SITE_NAME} does not recommend that any digital asset should be bought, sold, or held by you.
-            Always conduct your own due diligence before making any investment decisions.
+            Nothing in {SITE_NAME} constitutes financial, investment, or legal advice. Digital assets are volatile and
+            may lose value. Always do your own research before engaging in tipping or purchasing RLUSD.
           </div>
         </div>
       </div>

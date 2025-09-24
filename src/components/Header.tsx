@@ -47,8 +47,8 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleLaunchApp = () => {
-    window.open('https://app.zlend.fi/', '_blank', 'noopener,noreferrer');
+  const handleJoinWaitlist = () => {
+    window.open('https://tally.so/r/wQaGEl', '_blank', 'noopener,noreferrer');
   };
 
   const handleRedirect = () => {
@@ -169,10 +169,10 @@ const Header: React.FC = () => {
       <div className="button-container">
         <button 
           ref={buttonRef}
-          aria-label="Launch App"
-          onClick={handleLaunchApp}
+          aria-label="Join Waitlist"
+          onClick={handleJoinWaitlist}
         >
-          <span>Launch App</span>
+          <span>Join Waitlist</span>
         </button>
       </div>
     </header>

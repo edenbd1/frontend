@@ -27,19 +27,19 @@
 }
 
 .logo-text {
-  height: 30px;
+  height: 44px;
   width: auto;
   display: block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  max-width: clamp(120px, 25vw, 250px);
+  max-width: clamp(170px, 31vw, 320px);
   object-fit: contain;
   cursor: pointer;
 }
 
 .logo-text.mobile-logo {
-  height: 30px;
+  height: 42px;
   width: auto;
   position: static;
   transform: none;
@@ -104,7 +104,7 @@
   }
   
   .logo-text {
-    height: 40px;
+    height: 50px;
     width: auto;
     position: static;
     transform: none;

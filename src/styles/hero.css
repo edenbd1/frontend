@@ -8,7 +8,7 @@
   width: 100%;
   height: calc(100vh + 190px);
   min-height: 1000px;
-  background: radial-gradient(140% 107.13% at 50% 10%, transparent 37.41%, #006AFE 69.27%, #e6f0ff 100%);
+  background: #ffffff;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -27,7 +27,7 @@
   font-size: clamp(3.5rem, 6vw, 6.5rem);
   line-height: 1;
   font-weight: 600;
-  color: white;
+  color: #0d1117;
 }
 
 .hero-title-primary {
@@ -41,7 +41,7 @@
   display: block;
   font-size: clamp(2.8rem, 5vw, 5rem);
   font-style: italic;
-  color: white;
+  color: #0d1117;
 }
 
 .hero-emphasis {
@@ -60,7 +60,7 @@
   width: 100%;
   font-family: "Alpha";
   font-size: clamp(1rem, 1.7vw, 1.7rem);
-  color: white;
+  color: #0d1117;
   justify-content: center;
   align-items: center;
   gap: 0.3em;
@@ -112,7 +112,7 @@
   font-size: clamp(1rem, 1.7vw, 1.7rem);
   font-weight: normal;
   line-height: 1.5;
-  color: white;
+  color: #0d1117;
   white-space: nowrap;
 }
 
@@ -123,7 +123,7 @@
   font-size: clamp(1.7rem, 2.5vw, 2.2rem);
   font-weight: 400;
   text-decoration: none;
-  color: white;
+  color: #006AFE;
   align-items: center;
   letter-spacing: 0.02em;
   gap: 12px;
@@ -133,7 +133,7 @@
 .cta-link:hover {
   transform: scale(1.01);
   gap: 14px;
-  color: #006AFE;
+  color: #004bb5;
 }
 
 .cta-arrow {
@@ -142,11 +142,11 @@
   transition: 0.2s ease;
   width: 20pt;
   height: 20pt;
-  fill: white;
+  fill: #006AFE;
 }
 
 .cta-container:hover .cta-arrow {
-  fill: #A77DFF;
+  fill: #004bb5;
 }
 
 @media (max-width: 480px) {
@@ -163,7 +163,7 @@
   width: 130px;
   height: 60px;
   border-radius: 100px;
-  background-color: #f9f9fa15;
+  background-color: rgba(13, 17, 23, 0.06);
   justify-content: center;
   align-items: center;
 }
@@ -171,7 +171,7 @@
 .hero-subtitle-title {
   font-size: 0.8rem;
   font-weight: 600;
-  color: white;
+  color: #0d1117;
   opacity: 0.6;
 }
 
@@ -179,7 +179,7 @@
   margin-top: -2px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: white;
+  color: #0d1117;
 }
 
 /* Coin animation */
@@ -193,14 +193,15 @@
   display: block;
   width: 150px;
   height: auto;
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3)) blur(16px);
-  transition: filter 0.2s ease;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease;
   cursor: pointer;
   animation: float 4s ease-in-out infinite;
 }
 
 .coin-container:hover {
-  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.3)) blur(0) !important;
+  filter: drop-shadow(0 0 18px rgba(0, 0, 0, 0.25));
+  transform: scale(1.02);
 }
 
 .coin-container.left-1 {
